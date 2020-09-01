@@ -1,8 +1,8 @@
 ## Some Arithmetic for the Buttons Computer
 
 In the fall of 2020, I did some assembly-style hacking
-for a web toy hacked up by [Zed Shaw](https://twitter.com/lzsthw)
-on Twitter.
+for a web toy hacked up by [Zed Shaw](https://twitter.com/lzsthw),
+which I ran across on Twitter.
 
 It's a model of a simple stack computer, with a few
 registers and a minimal feature set.  It's called
