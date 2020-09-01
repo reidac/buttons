@@ -6,7 +6,7 @@ on Twitter.
 
 It's a model of a simple stack computer, with a few
 registers and a minimal feature set.  It's called
-"[buttons.computer](buttons.computer)", and it's about
+"[buttons.computer](https://buttons.computer)", and it's about
 boundary-crossing and the difference between "button-pushing"
 and "real programming".
 
