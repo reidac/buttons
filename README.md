@@ -19,8 +19,8 @@ I hacked up.
 
 ### Fibonacci Squence
 
-The sequence is given by a simple recurrence relation, the $n$th
-term in the series, $s_n$, is given by $s_n=s_{n-1}+s_{n-2}$.
+The sequence is given by a simple recurrence relation, the nth
+term in the series, s_n, is given by s_n=s_{n-1}+s_{n-2}.
 
 The first two nonzero entries in the series are 1 and 1, and the 
 series continues, 2, 3, 5, 8, 13, etc.
@@ -47,11 +47,11 @@ numbers quickly.
 This is a simpler algorithm, and probably should have been
 done first.  
 
-The factorial of a number $n$, denoted $n!$, is the product of
+The factorial of a number n, denoted n!, is the product of
 that number and all the numbers less than it, down to 1, and
 not including zero or negative numbers.
 
-The annotated buttons program, with $9$ as input, is:
+The annotated buttons program, with 9 as input, is:
  
     00: PUSH 9   ; Push the input on to the stack.
     01: STOR AX  ; Make a copy of it, for counting down.
@@ -71,12 +71,12 @@ The annotated buttons program, with $9$ as input, is:
 The [Collatz conjecture](https://en.wikipedia.org/wiki/Collatz_conjecture)
 involves the behavior of integer sequences according to a simple rule. 
 
-Start with some positive integer $N$.  If $N$ is even, divide it by 
-two, and if it's odd, multiply it by $3$ and add $1$. Then repeat, 
+Start with some positive integer N.  If N is even, divide it by 
+two, and if it's odd, multiply it by 3 and add 1. Then repeat, 
 using the result as the new input.  If at any point you get 
-$1$ as a result, then stop.
+1 as a result, then stop.
 
-The conjecture is that all positive integers eventually reach $1$
+The conjecture is that all positive integers eventually reach 1
 by this rule.  It's not known if this is true, and some 
 sequences can get very long.
 
