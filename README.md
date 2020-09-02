@@ -119,12 +119,13 @@ This code was written subsequent to the addition of the `POKE`
 instruction in the buttons computer, and so it uses that to
 put subsequent random numbers into the memory array.
 
-This code sort of breaks the expected model, because it
-assumes that the computer will do integer arithmetic, but
-the button computer doesn't do that, it does floating-point
-arithmetic.  In place of the division by 2^16 at step 10, 
-it should probably do some kind of integer remainer 
-operation. 
+Here we run up against a feature of the buttons computer, which
+is that it does floating-point operations on its values. We actually
+want integer division, so the commands from 08 through 15 do this
+for us -- first find the remainder of the division, and subtract
+it from the original value, so that what's left is evenly divisible
+by the divisor, then do the regular division to get an integer 
+result.
 
     00: PUSH 17         ; Put the first "random" state on the stack. 
     01: PUSH 214013     ; Start of the loop. v*=214013
@@ -135,8 +136,12 @@ operation.
     06: MOD
     07: STOR AX         ; Preserve the state value, but duplicate  it
     08: RSTOR AX        ; on the stack to generate output.
-    09: PUSH 65536      ; Output is state/2^16.
-    10: DIV             ;
-    11: POKE 1          ; Write output and increment IX.
-    12: POP             ; Clean up the stack.
-    13: JUMP 1          ; Go again.
+    09: RSTOR AX        ; 2x -- first for remainer.
+    11: PUSH 65536      ; Output is state/2^16.
+    12: MOD             ; Consumes 1 of the v's. 
+    13: SUB             ; Stack now has v divisible by 65536.
+    14: PUSH 65536      ; Push it back on
+    15: DIV             ; Complete the integer division.
+    16: POKE 1          ; Write output and increment IX.
+    17: RSTOR AX        ; Repopulate v on the stack.
+    18: JUMP 1          ; Go again.
