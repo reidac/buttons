@@ -110,7 +110,8 @@ A buttons program to implement this rule is:
 
 This code, taken from [here](https://rosettacode.org/wiki/Linear_congruential_generator)
 and using the "Microsoft" parameters, implements a pseudo-random
-number generator using the simple Linear Congruential Method.
+number generator using the simple 
+[Linear Congruential Method.](https://mathworld.wolfram.com/LinearCongruenceMethod.html)
 
 This code was written subsequent to the addition of the `POKE`
 instruction in the buttons computer, and so it uses that to
