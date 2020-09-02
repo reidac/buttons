@@ -127,6 +127,10 @@ it from the original value, so that what's left is evenly divisible
 by the divisor, then do the regular division to get an integer 
 result.
 
+The annotated code is below.  Note that, as with the Fibonacci
+example, this code has no halting condition, but will keep
+going until the host computer runs out of clicks.
+
     00: PUSH 17         ; Put the first "random" state on the stack. 
     01: PUSH 214013     ; Start of the loop. v*=214013
     02: MUL
@@ -134,8 +138,8 @@ result.
     04: ADD
     05: PUSH 2147483648 ; v = v mod 2^31
     06: MOD
-    07: STOR AX         ; Preserve the state value, but duplicate  it
-    08: RSTOR AX        ; on the stack to generate output.
+    07: STOR AX         ; Preserve the state value, but duplicate it
+    08: RSTOR AX        ; ...on the stack to generate output.
     09: RSTOR AX        ; 2x -- first for remainer.
     11: PUSH 65536      ; Output is state/2^16.
     12: MOD             ; Consumes 1 of the v's. 
