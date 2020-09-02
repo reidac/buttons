@@ -106,3 +106,34 @@ A buttons program to implement this rule is:
     21: RSTOR AX ; Put the current N on to the stack.
     22: JUMP 1   ; Re-run everything with the new value.
 
+### Linear Congruential Pseudo-Random Number Generator
+
+This code, taken from [here](https://rosettacode.org/wiki/Linear_congruential_generator)
+and using the "Microsoft" parameters, implements a pseudo-random
+number generator using the simple Linear Congruential Method.
+
+This code was written subsequent to the addition of the `POKE`
+instruction in the buttons computer, and so it uses that to
+put subsequent random numbers into the memory array.
+
+This code sort of breaks the expected model, because it
+assumes that the computer will do integer arithmetic, but
+the button computer doesn't do that, it does floating-point
+arithmetic.  In place of the division by 2^16 at step 10, 
+it should probably do some kind of integer remainer 
+operation. 
+
+    00: PUSH 17         ; Put the first "random" state on the stack. 
+    01: PUSH 214013     ; Start of the loop. v*=214013
+    02: MUL
+    03: PUSH 253101     ; v+= 253101
+    04: ADD
+    05: PUSH 2147483648 ; v = v mod 2^31
+    06: MOD
+    07: STOR AX         ; Preserve the state value, but duplicate  it
+    08: RSTOR AX        ; on the stack to generate output.
+    09: PUSH 65536      ; Output is state/2^16.
+    10: DIV             ;
+    11: POKE 1          ; Write output and increment IX.
+    12: POP             ; Clean up the stack.
+    13: JUMP 1          ; Go again.
