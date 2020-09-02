@@ -35,10 +35,8 @@ sequence out to the memory array, is here:
     04: STOR AX   ; Cache s[n-1], we'll need it later.
     05: ADD       ; Generate s[n] by adding the top two stack entries.
     06: POKE 1    ; Write it out.
-    07: STOR BX   ; Store s[n] 
-    08: POP       ; Clear the sum from the stack.
-    09: RSTOR AX  ; Push s[n-1] and s[n] on to the stack.
-    10: RSTOR BX  ; ... in the right order.
+    09: RSTOR AX  ; Push s[n] on top of s[n-1] on the stack.
+    10; SWAP      ; Flip the top two stack entries.
     11: JUMP 4    ; Loop, with s[n] and s[n-1] now on the stack.
 
 Note that the behavior of the memory indexing is such
