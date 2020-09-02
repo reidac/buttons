@@ -147,5 +147,5 @@ going until the host computer runs out of clicks.
     14: PUSH 65536      ; Push it back on
     15: DIV             ; Complete the integer division.
     16: POKE 1          ; Write output and increment IX.
-    17: RSTOR AX        ; Repopulate v on the stack.
+    17: POP             ; Clean up the stack.
     18: JUMP 1          ; Go again.
