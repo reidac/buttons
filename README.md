@@ -213,12 +213,12 @@ is the overall factor of the square root of 12 that this sum
 requires.  It's legitimate to wonder, if we can have magic numbers
 in our code, why not just hard-code pi? 
 
+The answer is that this is a coding exercise, but that's
+a good question to be asking in general.
+
 Also, being non-integer, this is arguably not in the spirit
 of push-button computing that is the actual point of the
 buttons computer.
-
-The answer is that this is a coding exercise, but that's
-a good question to be asking in general.
 
     00: PUSH 1             ; Initial value for 3^N.
     01: STOR BX            ;
