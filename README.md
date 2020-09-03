@@ -203,8 +203,7 @@ A faster approximation for pi is given by the summation of
 terms of the form (-1)^n/((2n+1)(3^n)), summed from n to 
 as high as you want, with the overall sum then multiplied
 by the square root of 12.  This was apparently derived
-from Leibniz series above in the [middle ages]
-(https://en.wikipedia.org/wiki/Approximations_of_%CF%80#Middle_Ages)
+from Leibniz series above in the [middle ages](https://en.wikipedia.org/wiki/Approximations_of_%CF%80#Middle_Ages)
 
 This code is sufficiently complicated that we don't do the loop
 unrolling, we test for even-ness of N instead.
