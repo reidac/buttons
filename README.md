@@ -255,3 +255,31 @@ buttons computer.
     32: POP                ; Clean up increment junk.
     33: JUMP 5             ; Restart the main loop.
  
+
+### Square Roots
+
+So we "cheated" in the foregoing example, but we don't have to cheat,
+we have a computer, that can compute square roots.
+
+There's a [Babylonian](https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method)
+method, another infinite-series algorithm, that only uses simple
+arithmetic, and so is well-suited to our machine's capabilities.
+
+    00: PUSH 12   ; The thing we want the square root of.
+    01: STOR AX   ; 
+    02: PUSH 3    ;
+    03: DIV       ; Divide by three for the (bad?) initial guess.
+    04: STOR BX   ; Keep track of our iterates in BX.
+    05: POP       ; Clean up the stack.
+    06: RSTOR BX  ; Start of main loop. It's ((AX/BX)+BX)/2
+    07: RSTOR AX  ; 
+    08: RSTOR BX  ;
+    09: DIV       ; AX/BX
+    10: ADD       ; (AX/BX)+BX
+    11: PUSH 2    ;
+    12: DIV       ; Done!
+    13: STOR BX   ; Save it.
+    14: POP       ; Clean up the stack.
+    15: JUMP 6    ; Iterate.
+
+I get accuracy of one part in 10^11 when this algo stops after 256 clicks.
