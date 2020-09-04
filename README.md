@@ -284,6 +284,7 @@ quantity S, compute an improved estiamte by x=((S/x)+x)/2.
     12: DIV       ; Done!
     13: STOR BX   ; Save it.
     14: POP       ; Clean up the stack.
-    15: JUMP 6    ; Iterate.
+    15: POKE 1    ; Record the approximations, why not.
+    16: JUMP 6    ; Iterate.
 
 I get accuracy of one part in 10^11 when this algo stops after 256 clicks.
