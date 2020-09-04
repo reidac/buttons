@@ -16,3 +16,13 @@ tweeted them, but they were hard-to-read screenshots.
 This repo may eventually contain shareable code, but for now,
 it's got annotated "assembly" listings of the programs
 I hacked up.
+
+The examples are:
+
+ * Computing [factorials](factorial.md)
+ * The [Fibonacci](fibonacci.md) series
+ * The [Collatz](collatz.md) conjecture series
+ * A (bad) [Random number generator](prng.md)
+ * A slow series to [compute pi](slow_pi.md)
+ * A fast series to [compute pi](fast_pi.md)
+ * A [square-root](sqrt.md) implementation
