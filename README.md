@@ -287,4 +287,7 @@ quantity S, compute an improved estiamte by x=((S/x)+x)/2.
     15: POKE 1    ; Record the approximations, why not.
     16: JUMP 6    ; Iterate.
 
-I get accuracy of one part in 10^11 when this algo stops after 256 clicks.
+I get accuracy of one part in 10^11 when this algo stops after 256 clicks,
+and the recorded sequence of values seems to show that it actually
+converged after five passes through the loop, and we did 22, 
+so we did about four times too much work!
