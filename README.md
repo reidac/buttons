@@ -26,3 +26,4 @@ The examples are:
  * A slow series to [compute pi](slow_pi.md)
  * A fast series to [compute pi](fast_pi.md)
  * A [square-root](sqrt.md) implementation
+ * A [signum](signum.md) function fragment
