@@ -1,6 +1,6 @@
 ### Factorial 
 
-This is a simpler algorithm, and is a good place to start.
+This is a simple algorithm, and is a good place to start.
 
 The factorial of a number n, denoted n!, is the product of
 that number and all the numbers less than it, down to 1, and

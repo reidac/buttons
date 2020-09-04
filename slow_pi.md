@@ -1,6 +1,6 @@
 ### Leibniz's Series for Pi
 
-This algorithm feels like it makes better use of the floating-point
+This algorithm feels like it makes good use of the floating-point
 capabilities of the button computer.
 
 There is an infinite sum that (slowly) approaches the value of pi,
