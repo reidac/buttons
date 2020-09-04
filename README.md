@@ -265,6 +265,10 @@ There's a [Babylonian](https://en.wikipedia.org/wiki/Methods_of_computing_square
 method, another infinite-series algorithm, that only uses simple
 arithmetic, and so is well-suited to our machine's capabilities.
 
+The algorithm is, given an estimate x for the square root of some
+quantity S, compute an improved estiamte by x=((S/x)+x)/2.
+
+
     00: PUSH 12   ; The thing we want the square root of.
     01: STOR AX   ; 
     02: PUSH 3    ;
