@@ -1,6 +1,7 @@
-### Fibonacci Squence
+### Fibonacci Sequence
 
-The sequence is given by a simple recurrence relation, the nth
+This [sequence](https://en.wikipedia.org/wiki/Factorial)
+is given by a simple recurrence relation, the nth
 term in the series, s_n, is given by s_n=s_{n-1}+s_{n-2}.
 
 The first two nonzero entries in the series are 1 and 1, and the 

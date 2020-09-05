@@ -1,7 +1,7 @@
 ### Logarithms
 
 There is a [fast series](https://en.wikipedia.org/wiki/Logarithm#Calculation)
-for computing the natural logarithm of a positive number x,
+for computing the natural logarithm of a positive number x.
 
 This series uses only integer powers and basic arithmetic, so
 it's well-suited to the buttons computer.
@@ -20,7 +20,7 @@ As code, it looks like this:
     04: SUB       ; x-1 is on the stack now.
     05: RSTOR AX  ;
     06: PUSH 1    ;
-    07: ADD       ; Stack as x+1 on top, x-1 next.
+    07: ADD       ; Stack has x+1 on top, x-1 next.
     08: DIV       ;
     09: STOR AX   ; AX now has (x-1)/(x+1).  
     10: STOR CX   ; Powers in AX, 'a' iteself in CX.
