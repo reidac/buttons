@@ -17,7 +17,8 @@ it from the original value, so that what's left is evenly divisible
 by the divisor, then do the regular division to get an integer 
 result.
 
-The annotated code is below.  Note that, as with the Fibonacci
+The annotated code is below.  Note that, as with the 
+[Fibonacci](fibonacci.md)
 example, this code has no halting condition, but will keep
 going until the host computer runs out of clicks.
 
@@ -30,10 +31,10 @@ going until the host computer runs out of clicks.
     06: MOD
     07: STOR AX         ; Preserve the state value, but duplicate it
     08: RSTOR AX        ; ...on the stack to generate output.
-    09: RSTOR AX        ; 2x -- first for remainer.
+    09: RSTOR AX        ; 2x -- first for remainder.
     11: PUSH 65536      ; Output is state/2^16.
     12: MOD             ; Consumes 1 of the v's. 
-    13: SUB             ; Stack now has v divisible by 65536.
+    13: SUB             ; Stack now has v - (v%65536), divisible by 65536.
     14: PUSH 65536      ; Push it back on
     15: DIV             ; Complete the integer division.
     16: POKE 1          ; Write output and increment IX.

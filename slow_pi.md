@@ -1,9 +1,10 @@
-### Leibniz's Series for Pi
+### The Madhava-Leibniz Series for Pi
 
 This algorithm feels like it makes good use of the floating-point
 capabilities of the button computer.
 
-There is an infinite sum that (slowly) approaches the value of pi,
+There is an [infinite sum](https://en.wikipedia.org/wiki/Leibniz_formula_for_%CF%80)
+that (slowly) approaches the value of pi,
 given by (pi/4) = 1 - (1/3) + (1/5) - (1/7) ... + (-1)^n/(2n+1)
 
 Multiplying by 4 on both sides gives us pi directly.
