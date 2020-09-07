@@ -28,3 +28,4 @@ The examples are:
  * A [square-root](sqrt.md) implementation
  * A [signum](signum.md) function fragment
  * A fast [logarithm](log.md) sum.
+ * An attempt at a 1D [cellular automaton](rule30.md).
