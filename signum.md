@@ -21,7 +21,7 @@ the original number is positive.
     00: PUSH -42  ; The number we're testing, call it x.
     01: STOR AX   ; We'll need it again.
     02: PUSH 1    ;
-    03: ADD       ; Comptue x+1..
+    03: ADD       ; Compute x+1..
     04: RSTOR AX  ; 
     05: MOD       ; (x+1) mod x
     06: PUSH 1    ;
